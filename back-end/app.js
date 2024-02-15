@@ -78,5 +78,13 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route to return a json object with 2 paragraphs of text and an image url
+app.get('/about', (req, res) => {
+  res.json({
+    text: 'Hello, My name is Henry Zhang. I am a full stack developer. I am currently a student at New York University Shanghai. I am studying Computer Science with a Minor in Business',
+    text2: 'I am a passionate developer who loves to learn new technologies and build cool projects. I am currently looking for a summer internship in 2024. I am open to any opportunities. Feel free to reach out to me at hsz2011@nyu.edu',
+    image: 'https://www.henryszhang.com/static/media/profilepic.85dace77e7fd0c98ca69.jpg',
+  })
+})
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
